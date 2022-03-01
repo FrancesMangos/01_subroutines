@@ -1,4 +1,3 @@
-
 def highest(a, b):
     if a > b:
         highest_num = a
