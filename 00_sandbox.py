@@ -3,6 +3,6 @@ def calculate(a, b):
     print("{} + {} = {}".format(a, b, answer))
 
 num1 = int(input("Enter a number:"))
+num2 = int(input("Enter another number:"))
 
-
-average
+calculate(num1, num2)
