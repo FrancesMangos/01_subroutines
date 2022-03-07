@@ -1,30 +1,38 @@
-def ask_num(question):
-    start = False
-    while not start:
-        try:
-            num = int(input("Enter a number:"))
-            start = True
-        except ValueError:
-            print("Please enter a number")
-
-num1 = ask_num("Enter a number")
-num2 = ask_num("Enter another number")
-
 start = False
 while not start:
     try:
-        symbol = input("Would you like to +, -, * or / ?")
-        if symbol == "-":
-            answer = num1 - num2
-        elif symbol == "*":
-            answer = num1 * num2
-        elif symbol == "+":
-            answer = num1 + num2
-        elif symbol == "/":
-            answer = num1 / num2
-        else:
-            print("Please enter a valid sign")
+        num1 = int(input("Enter a number:"))
+        start = True
     except ValueError:
-        print("Please enter a valid sign")
+        print("Please enter a number!")
 
-print("{} {} {} = {}".format(num1, symbol, num2, answer))
+start_num = False
+while not start_num:
+    try:
+        num2 = int(input("Enter another number:"))
+        start_num = True
+    except ValueError:
+        print("Please enter a number!")
+
+start_symbol = False
+while not start_symbol:
+    symbol = input("Would you like to: add? (+), subtract (-), multiply (*) or divide (/) ?")
+    if symbol == "-":
+        print("{} - {} = ".format(num1, num2))
+        print(num1 - num2)
+        start_symbol = True
+    elif symbol == "+":
+        print("{} - {} = ".format(num1, num2))
+        print(num1 + num2)
+        start_symbol = True
+    elif symbol == "/":
+        print("{} / {} = ".format(num1, num2))
+        print(num1 / num2)
+        start_symbol = True
+    elif symbol == "*":
+        print("{} * {} = ".format(num1, num2))
+        print(num1 * num2)
+        start_symbol = True
+    else:
+        print("Please enter a symbol!")
+
