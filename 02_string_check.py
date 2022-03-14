@@ -2,7 +2,7 @@ def int_check(question):
 	while True:
 		try:
 			response = int(input(question))
-			if response >= 5:
+			if response >= 6:
 			    return response
 
 			print("You are too young to to de doing this by yourself")
