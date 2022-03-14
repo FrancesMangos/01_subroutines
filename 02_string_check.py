@@ -14,7 +14,7 @@ def check_input(question):
     while True:
         try:
             response = input(question).title()
-            if response.isdigit() or response == "":
+            if response.isdigit() or response == "" or response.isdecimal():
                 print("That is not a valid name")
             else:
                 return response
