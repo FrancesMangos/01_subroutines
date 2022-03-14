@@ -13,8 +13,8 @@ def int_check(question):
 def check_input(question):
     while True:
         try:
-            response = input(question).title()
-            if response.isdigit() or response == "" or response.isdecimal():
+            response = str(input(question)).title()
+            if not response.isalpha() or response == "":
                 print("That is not a valid name")
             else:
                 return response
